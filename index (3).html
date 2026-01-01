@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    background: radial-gradient(circle, #000428, #004e92);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color:white;
+}
+
+.container{
+    text-align:center;
+    z-index:2;
+    padding:20px;
+}
+
+/* Glow Text */
+h1{
+    font-size:3em;
+    animation: glow 2s infinite alternate;
+}
+
+h2{
+    font-size:2.2em;
+    color:#ffd700;
+}
+
+p{
+    font-size:1.1em;
+    line-height:1.6;
+}
+
+/* Glow animation */
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff,0 0 20px #00f,0 0 30px #0ff;
+    }
+    to{
+        text-shadow:0 0 20px #fff,0 0 40px #ff0,0 0 60px #f0f;
+    }
+}
+
+/* Button */
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+    box-shadow:0 0 15px rgba(255,255,255,0.6);
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+/* Second message */
+#second{
+    display:none;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- First Message -->
+    <div id="first">
+        <h1>🎉 Happy New Year 🎉</h1>
+        <h2>✨ 2026 ✨</h2>
+        <p>May this new year bring happiness, success and peace in your life 💖</p>
+
+        <button onclick="showSecond()">Next ➡️</button>
+    </div>
+
+    <!-- Second Message -->
+    <div id="second">
+        <h1>🎊 Happy New Year 🎊</h1>
+        <h2>My All 8th Class Friends 🤝</h2>
+
+        <p>
+        Dear friends,<br><br>
+        2026 आप सभी के जीवन में नई खुशियाँ लाए 😊<br>
+        हमारी दोस्ती हमेशा ऐसी ही बनी रहे 💫<br>
+        पढ़ाई में सफलता मिले 📚<br>
+        सपने पूरे हों ✨<br>
+        और हम सब आगे चलकर अपने माता-पिता और स्कूल का नाम रोशन करें 🌟
+        </p>
+
+        <p><b>Once again, Happy New Year 2026 to all my 8th class friends ❤️</b></p>
+
+        <button onclick="playMusic()">Celebrate 🎶</button>
+    </div>
+
+</div>
+
+<!-- Music -->
+<audio id="music">
+    <source src="newyear.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function showSecond(){
+    document.getElementById("first").style.display="none";
+    document.getElementById("second").style.display="block";
+}
+
+function playMusic(){
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
